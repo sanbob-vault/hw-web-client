@@ -1,0 +1,198 @@
+/* Базовый сброс стилей */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Разделяем экран на две части */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.controls-panel {
+    width: 400px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    overflow-y: auto;
+}
+
+.preview-panel {
+    flex-grow: 1;
+    background-color: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2rVrf2RgYMAKmAkiAAMABA4BoU+y2s8AAAAASUVORK5CYII=');
+}
+
+/* --- Стилизация формы --- */
+h2 {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.settings-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+input[type="color"] {
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+.phone-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #444;
+}
+
+/* --- Кнопки --- */
+.btn-primary {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+}
+
+.btn-secondary {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.btn-secondary:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.btn-remove {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0 12px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.btn-remove:hover {
+    background-color: #c0392b;
+}
+
+/* --- Визитка --- */
+.business-card {
+    background-color: white;
+    width: 600px;
+    height: 350px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-company {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.card-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-position {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.card-contacts {
+    text-align: right;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.8;
+    margin-top: auto;
+}

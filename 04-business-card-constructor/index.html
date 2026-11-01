@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор визиток</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Левая панель: Форма ввода данных -->
+        <aside class="controls-panel">
+            <h2>Конструктор визиток</h2>
+            
+            <div class="form-group">
+                <label for="companyInput">Наименование организации</label>
+                <input type="text" id="companyInput" value='ПО "Компьютер"'>
+            </div>
+            
+            <div class="form-group">
+                <label for="nameInput">Фамилия, имя, отчество</label>
+                <input type="text" id="nameInput" value="Красивый Закат Семенович">
+                <!-- Блок настроек ФИО -->
+                <div class="settings-row">
+                    <select id="nameAlign">
+                        <option value="left">Влево</option>
+                        <option value="center" selected>По центру</option>
+                        <option value="right">Вправо</option>
+                    </select>
+                    <select id="nameSize">
+                        <option value="24px">24px</option>
+                        <option value="26px">26px</option>
+                        <option value="28px" selected>28px</option>
+                    </select>
+                    <input type="color" id="nameColor" value="#000000">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="positionInput">Должность</label>
+                <input type="text" id="positionInput" value="Менеджер по ПО">
+                <!-- Блок настроек должности -->
+                <div class="settings-row">
+                    <select id="positionAlign">
+                        <option value="left">Влево</option>
+                        <option value="center" selected>По центру</option>
+                        <option value="right">Вправо</option>
+                    </select>
+                    <select id="positionSize">
+                        <option value="14px">14px</option>
+                        <option value="16px" selected>16px</option>
+                        <option value="18px">18px</option>
+                    </select>
+                    <input type="color" id="positionColor" value="#666666">
+                </div>
+            </div>
+            
+            <!-- Контейнер для списка телефонов -->
+            <div class="form-group" id="phoneContainer">
+                <label>Телефон</label>
+                <div class="phone-row">
+                    <input type="text" class="phone-input" value="8 (999) 123-45-67">
+                </div>
+            </div>
+            <!-- Кнопка вынесена из form-group для правильного отступа -->
+            <button id="addPhoneBtn" class="btn-secondary">+ Добавить еще один телефон</button>
+            
+            <div class="form-group mt-20">
+                <label for="emailInput">E-mail</label>
+                <input type="text" id="emailInput" value="forlabs@withlove.ru">
+                <!-- Чекбокс привязан к label для кликабельности -->
+                <label class="checkbox-label"><input type="checkbox" id="emailShow" checked> Отображать</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="addressInput">Адрес</label>
+                <input type="text" id="addressInput" value="Иркутск, Лермонтова, 127, оф. 402">
+                <label class="checkbox-label"><input type="checkbox" id="addressShow" checked> Отображать</label>
+            </div>
+            
+            <button id="applyBtn" class="btn-primary">Применить</button>
+        </aside>
+
+        <!-- Правая панель: Отображение визитки -->
+        <!-- Данные заполняются при подгрузке скрипта -->
+        <main class="preview-panel">
+            <div class="business-card" id="businessCard">
+                <div class="card-company" id="cardCompany"></div>
+                <div class="card-name" id="cardName"></div>
+                <div class="card-position" id="cardPosition"></div>
+                <div class="card-contacts">
+                    <!-- Обертка для динамического рендера телефонов -->
+                    <div id="cardPhonesList">
+                        <div></div> 
+                    </div>
+                    <div id="cardEmail"></div>
+                    <div id="cardAddress"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="dist/script.js"></script>
+</body>
+</html>
